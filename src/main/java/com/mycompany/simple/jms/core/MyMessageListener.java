@@ -5,10 +5,14 @@
  */
 package com.mycompany.simple.jms.core;
 
+import com.mycompany.simple.jms.service.EmployeeServiceImpl;
+import static com.mycompany.simple.jms.service.EmployeeServiceImpl.logger;
 import javax.jms.MapMessage;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.TextMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
@@ -17,14 +21,16 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class MyMessageListener implements MessageListener {
+    
+    public static final Logger logger = LoggerFactory.getLogger(MyMessageListener.class);
 
     @Override
     public void onMessage(Message m) {
 
         try {
-           System.out.println("Received a new message ");
+           logger.info("Received a new message ");
             MapMessage message = (MapMessage) m;
-            System.out.println("Sending offer letter for " + message.getLong("employeeId"));
+            logger.info("Sending offer letter for employeeId " + message.getLong("employeeId"));
         } catch (Exception e) {
             e.printStackTrace();
         }
