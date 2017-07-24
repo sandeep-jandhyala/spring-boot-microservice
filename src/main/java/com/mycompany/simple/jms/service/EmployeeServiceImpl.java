@@ -51,7 +51,7 @@ public class EmployeeServiceImpl {
         event.setEmployeeId(ec.getEmployeeId());   
         sender.sendMessage(event);
         
-        logger.info("Published Employee Created event");
+        logger.info("Published Employee Created event to eventbus");
         
         return ec.getEmployeeId();
 
