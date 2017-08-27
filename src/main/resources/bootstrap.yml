@@ -1,0 +1,16 @@
+## YAML Template.
+---
+
+spring:
+  profiles: default
+  cloud:
+    consul:
+      config:
+        enabled: false
+        data-key: data
+        prefix: config
+        format: yaml
+      host: localhost
+      port: 8500
+      discovery:
+        prefer-ip-address: true 
