@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
  * @author jan_s
  */
 @Component
-public class EmployeeServiceImpl {
+public class EmployeeServiceImpl implements EmployeeService{
     
     public static final Logger logger = LoggerFactory.getLogger(EmployeeServiceImpl.class);
 

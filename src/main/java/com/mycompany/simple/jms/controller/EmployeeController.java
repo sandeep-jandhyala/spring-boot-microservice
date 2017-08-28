@@ -6,6 +6,7 @@
 package com.mycompany.simple.jms.controller;
 
 import com.mycompany.simple.jms.data.Employee;
+import com.mycompany.simple.jms.service.EmployeeService;
 import com.mycompany.simple.jms.service.EmployeeServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +29,7 @@ public class EmployeeController {
     public static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 
     @Autowired
-    EmployeeServiceImpl eService;
+    EmployeeService eService;
 
     @RequestMapping(value = "/employee/{id}", method = RequestMethod.GET)
     public ResponseEntity<?> getEmployee(@PathVariable("id") long id) {
