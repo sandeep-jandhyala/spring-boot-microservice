@@ -3,15 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.spring.ws;
+package com.mycompany.employee.ws.util;
 
-import com.mycompany.spring.ws.service.EmployeeServiceImpl;
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +27,7 @@ public class PerformanceMonitorAspect {
 
        
     
-    @Around("execution(* com.mycompany.simple.jms.service.EmployeeServiceImpl.*(..))")
+    @Around("execution(* com.mycompany.employee.ws.service.EmployeeServiceImpl.*(..))")
 	public Object captureFinish(ProceedingJoinPoint jp) throws Throwable {
                 long start = System.currentTimeMillis();
                 Object result = jp.proceed();

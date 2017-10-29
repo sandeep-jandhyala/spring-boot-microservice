@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.spring.ws.service;
+package com.mycompany.employee.ws.service;
 
-import com.mycompany.spring.ws.controller.EmployeeController;
-import com.mycompany.spring.ws.core.MyMessageSender;
-import com.mycompany.spring.ws.dao.EmployeeRepository;
-import com.mycompany.spring.ws.data.Employee;
-import com.mycompany.spring.ws.data.EmployeeCreatedEvent;
+
+
+import com.mycompany.employee.ws.dao.EmployeeRepository;
+import com.mycompany.employee.ws.data.Employee;
+
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,11 +25,7 @@ public class EmployeeServiceImpl implements EmployeeService{
     
     public static final Logger logger = LoggerFactory.getLogger(EmployeeServiceImpl.class);
 
-    @Autowired
-    MyMessageSender sender;
-
-    @Autowired
-    EmployeeCreatedEvent event;
+ 
 
     @Autowired
     EmployeeRepository repo;
@@ -46,13 +42,8 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     public Long createEmployee(Employee e) {
         Employee ec = repo.save(e);
-        logger.info("New Employee record created , employee ID " + ec.getEmployeeId());
-        
-      //  event.setEmployeeId(ec.getEmployeeId());   
-       // sender.sendMessage(event);
-        
-      //  logger.info("Published Employee Created event to eventbus");
-        
+        logger.info("New Employee record created , employee ID " + ec.getEmployeeId());       
+          
         return ec.getEmployeeId();
 
     }

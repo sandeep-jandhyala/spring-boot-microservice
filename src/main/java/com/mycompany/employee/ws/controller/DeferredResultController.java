@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.spring.ws.controller;
+package com.mycompany.employee.ws.controller;
 
-import com.mycompany.spring.ws.service.EmployeeServiceImpl;
+import com.mycompany.employee.ws.service.EmployeeServiceImpl;
 import static java.lang.Thread.sleep;
 import java.util.logging.Level;
 import java.util.logging.Logger;

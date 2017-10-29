@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.spring.ws.service;
+package com.mycompany.employee.ws.service;
 
-import com.mycompany.spring.ws.data.Employee;
+import com.mycompany.employee.ws.data.Employee;
 import java.util.List;
 
 /**
