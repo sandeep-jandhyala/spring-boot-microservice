@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.simple.jms.core;
+package com.mycompany.spring.ws.core;
 
-import com.mycompany.simple.jms.service.EmployeeServiceImpl;
-import static com.mycompany.simple.jms.service.EmployeeServiceImpl.logger;
+import com.mycompany.spring.ws.service.EmployeeServiceImpl;
+import static com.mycompany.spring.ws.service.EmployeeServiceImpl.logger;
 import javax.jms.MapMessage;
 import javax.jms.Message;
 import javax.jms.MessageListener;

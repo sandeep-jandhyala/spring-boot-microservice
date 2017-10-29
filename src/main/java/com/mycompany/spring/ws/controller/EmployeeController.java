@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.simple.jms.controller;
+package com.mycompany.spring.ws.controller;
 
-import com.mycompany.simple.jms.data.Employee;
-import com.mycompany.simple.jms.service.EmployeeService;
-import com.mycompany.simple.jms.service.EmployeeServiceImpl;
+import com.mycompany.spring.ws.data.Employee;
+import com.mycompany.spring.ws.service.EmployeeService;
+import com.mycompany.spring.ws.service.EmployeeServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

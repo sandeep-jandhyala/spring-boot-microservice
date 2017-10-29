@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.simple.jms;
+package com.mycompany.spring.ws;
 
-import com.mycompany.simple.jms.core.EmployeeCreatedMessageConverter;
-import com.mycompany.simple.jms.core.MyMessageListener;
+import com.mycompany.spring.ws.core.EmployeeCreatedMessageConverter;
+import com.mycompany.spring.ws.core.MyMessageListener;
 import javax.jms.Destination;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.command.ActiveMQQueue;

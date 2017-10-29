@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.simple.jms.core;
+package com.mycompany.spring.ws.core;
 
-import com.mycompany.simple.jms.data.EmployeeCreatedEvent;
+import com.mycompany.spring.ws.data.EmployeeCreatedEvent;
 import javax.jms.JMSException;
 import javax.jms.MapMessage;
 import javax.jms.Message;
